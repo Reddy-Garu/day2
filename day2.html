@@ -1,0 +1,115 @@
+<html>
+<head>
+    <title>Task manager Application</title>
+    <link rel="stylesheet" href="Task management application.css">
+    <style>
+        header{
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 1px;
+            float: middle;
+            
+        }
+        div{
+            text-align: center;
+            padding: 10px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        button:hover{
+            background-color: #ff403a;
+        }
+        button{
+            padding: 10px 20px;
+            background-color: rgb(7, 215, 243);
+            color:#fff;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor:pointer;
+            transition: background-color 0.3s ease;
+        }
+        ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+             display: flex;
+             align-items: center;
+             padding: 10px;
+             margin-bottom: 10px;
+             background-color: #fff;
+             border-radius: 5px;
+             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+         li:hover {
+             background-color: #f2f2f2;
+        }
+         li span {
+             flex-grow: 1;
+             margin-right: 10px;
+        }
+         li button {
+             background-color: transparent;
+             border: none;
+             color: #888;
+             cursor: pointer;
+             transition: color 0.3s ease;
+        }
+         li button:hover {
+              color: #333;
+        }
+         body {
+             font-family: 'Roboto', sans-serif;
+             background-color: #f2f2f2;
+        }
+        .container {
+              max-width: 600px;
+              margin: 0 auto;
+              padding: 20px;
+              background-color: #f9f9f9;
+              border-radius: 10px;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+             text-align: center;
+             color: #333;
+             margin-bottom: 20px;
+             background-color: orangered;
+        }
+        .input-container {
+             display: flex;
+             margin-bottom: 20px;
+        } 
+        input[type="text"] {
+             flex-grow: 1;
+             padding: 10px;
+             border-radius: 5px 0 0 5px;
+             border: none;
+             background-color: #fff;
+             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header><h1>Task Manager</h1></header>
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Add new task...">
+            <button onclick="addTask()">Add</button>
+            <button onclick="Remove">Remove</button>
+        </div>
+        <ul id="taskList"></ul>
+        <h2>Tasks</h2>
+        <input type="text" id="reading" placeholder="Reading">
+        <button>Delete</button>
+        <button>Edit</button>
+        <br><br>
+        <input type="text" id="writing" placeholder="Writing">
+        <button>Delete</button>
+        <button>Edit</button><br><br>
+        <input type="text" id="playing" placeholder="Playing">
+        <button>Delete</button>
+        <button>Edit</button><br><br>
+        <button>Clear</button>
+    </div>
+</body>
+</html>
